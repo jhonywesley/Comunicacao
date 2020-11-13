@@ -27,5 +27,15 @@ public class ComunicacaoController {
         }
 
     }
+    @RequestMapping(method = RequestMethod.PUT, path = "/mensagem")
+    public ResponseEntity<?> update(@RequestBody Mensagem mensagem) {
+
+        boolean verificacao = mensagemRepository.existsById(mensagem.getId());
+        if(verificacao){
+        return new ResponseEntity<>(mensagemRepository.save(mensagem), HttpStatus.OK);
+        }else{
+            return new ResponseEntity<>(mensagem, HttpStatus.NOT_FOUND);
+        }
+    }
 
 }

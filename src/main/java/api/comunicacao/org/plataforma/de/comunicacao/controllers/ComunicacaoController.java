@@ -16,4 +16,16 @@ public class ComunicacaoController {
         return new ResponseEntity<>(mensagemRepository.save(mensagem), HttpStatus.CREATED);
     }
 
+    @RequestMapping(method = RequestMethod.DELETE, path = "/mensagem")
+    public ResponseEntity<?> del(@RequestBody Mensagem mensagem) {
+          boolean verificacao = mensagemRepository.existsById(mensagem.getId());
+        if(verificacao){
+            mensagemRepository.delete(mensagem);
+            return new ResponseEntity<>(mensagem, HttpStatus.OK);
+        }else{
+            return new ResponseEntity<>(mensagem, HttpStatus.NOT_FOUND);
+        }
+
+    }
+
 }

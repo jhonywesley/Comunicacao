@@ -11,4 +11,9 @@ public class ComunicacaoController {
         return new ResponseEntity<>(mensagemRepository.findAll(), HttpStatus.OK);
     }
 
+    @RequestMapping(method = RequestMethod.POST, path = "/mensagem")
+    public ResponseEntity<?> add(@RequestBody Mensagem mensagem) {
+        return new ResponseEntity<>(mensagemRepository.save(mensagem), HttpStatus.CREATED);
+    }
+
 }

@@ -8,6 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import api.comunicacao.org.plataforma.de.comunicacao.models.Mensagem;
 import api.comunicacao.org.plataforma.de.comunicacao.repository.MensagemRepository;
+import javassist.tools.rmi.ObjectNotFoundException;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
@@ -41,7 +42,7 @@ class PlataformaDeComunicacaoApplicationTests {
 	}
 	@Test
 	public void testDelete() throws Exception {
-		long num = 13;
+		long num = 18;
 		boolean verificacao = mensagemRepository.existsById(num);
         if(verificacao){
             this.mensagemRepository.deleteById(num);

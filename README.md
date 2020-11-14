@@ -2,9 +2,8 @@
 ### Autor: Jhony Wesley Marques
 
 ### Requisitos para funcionar
-Utilizar editor preferido eclipse,visual studio,netbeans etc.
-instalar as estensões do springboot
-Banco de dados mysql
+Utilizar editor preferido eclipse,visual studio,netbeans etc,
+Instalar as estensões do springboot, Banco de dados utilizado é o mysql.
 
 ### Configurções
 Quando for iniciar modificar o arquivo application.properties com as respectivas configurações para funcionar no seu computador.
@@ -29,8 +28,8 @@ curl -v -d @data_del.json -H "Content-Type: application/json" -X DELETE localhos
 Ou se preferir utilizar o Postman para fazer isso.
 
 ### Teste unitário
-Nos testes modifique os valores a serem salvos ao que preferir.
+Nos testes modifique os valores a serem salvos aos que preferir.
 
-No teste do delete deve-se mudar o valor de 'num' o id que deseja excluir.
+No teste do delete deve-se mudar o valor de 'num' para o id que deseja excluir.
 
 

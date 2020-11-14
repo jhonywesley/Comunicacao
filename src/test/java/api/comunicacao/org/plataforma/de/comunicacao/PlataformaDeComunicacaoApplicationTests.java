@@ -27,5 +27,13 @@ class PlataformaDeComunicacaoApplicationTests {
 		Assertions.assertThat(mensagem.getMensagem()).isEqualTo("salvou");
 		Assertions.assertThat(mensagem.getTipo()).isEqualTo("whats");
 	}
+	@Test
+	public void testUpdate() throws Exception {
+		Mensagem mensagem = new Mensagem("15/05", "14:30", "jose", "salvou", "whats");
+		mensagem = this.mensagemRepository.save(mensagem);
+		mensagem.setMensagem("alterada");
+		mensagem = this.mensagemRepository.save(mensagem);
+		Assertions.assertThat(mensagem.getMensagem()).isEqualTo("alterada");
+	}
 
 }

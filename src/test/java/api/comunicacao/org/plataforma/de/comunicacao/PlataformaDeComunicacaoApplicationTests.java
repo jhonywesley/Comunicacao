@@ -35,5 +35,9 @@ class PlataformaDeComunicacaoApplicationTests {
 		mensagem = this.mensagemRepository.save(mensagem);
 		Assertions.assertThat(mensagem.getMensagem()).isEqualTo("alterada");
 	}
+	@Test
+	public void testGet() throws Exception {
+		Assertions.assertThat(mensagemRepository.findAll()).isNotEmpty();
+	}
 
 }

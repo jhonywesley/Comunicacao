@@ -39,5 +39,15 @@ class PlataformaDeComunicacaoApplicationTests {
 	public void testGet() throws Exception {
 		Assertions.assertThat(mensagemRepository.findAll()).isNotEmpty();
 	}
+	@Test
+	public void testDelete() throws Exception {
+		long num = 13;
+		boolean verificacao = mensagemRepository.existsById(num);
+        if(verificacao){
+            this.mensagemRepository.deleteById(num);
+        }else{
+			throw new ObjectNotFoundException("Objeto não encontrado");
+        }
+	}
 
 }

@@ -22,6 +22,7 @@ public class Mensagem implements Serializable{
     private String mensagem;
     private String tipo;
 
+    
     public String getData() {
         return data;
     }
@@ -74,4 +75,15 @@ public class Mensagem implements Serializable{
         this.id = id;
     }
 
+    public Mensagem( String data, String hora, String destinatario, String mensagem, String tipo) {
+
+        this.data = data;
+        this.hora = hora;
+        this.destinatario = destinatario;
+        this.mensagem = mensagem;
+        this.tipo = tipo;
+    }
+
+    public Mensagem() {
+    }
 }

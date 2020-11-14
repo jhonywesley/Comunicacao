@@ -8,11 +8,17 @@ Banco de dados mysql
 
 ### Configurções
 Quando for iniciar modificar o arquivo application.properties com as respectivas configurações para funcionar no seu computador.
+
 server.port=
+
 spring.jpa.properties.hibernate.jdbc.lob.nom_contextual_creation=true
+
 spring.datasource.url = jdbc:mysql://localhost:3306/banco?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+
 spring.datasource.username = 
+
 spring.datasource.password = 
+
 spring.jpa.hibernate.ddl-auto=update
 
 ### Teste
